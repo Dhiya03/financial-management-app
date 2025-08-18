@@ -54,6 +54,7 @@ class FinanceApp:
     def save_data(self):
         with open(DATA_FILE, "w") as f:
             json.dump(self.data, f, indent=4)
+        self.root.destroy()
 
     # ---------------- Dashboard ----------------
     def create_dashboard_tab(self):
@@ -81,7 +82,7 @@ class FinanceApp:
             self.trans_tree.heading(col, text=col)
         self.trans_tree.pack(expand=1, fill="both")
 
-        ttk.Button(self.transactions_tab, text="Add Transaction", command=self.add_transaction).pack()
+        ttk.Button(self.transactions_tab, text="Add Transaction", command=self.add_transaction).pack(pady=5)
 
         self.refresh_transactions()
 
@@ -95,6 +96,8 @@ class FinanceApp:
                 "description": values["Description"]
             })
             self.refresh_transactions()
+            self.refresh_budget()
+            self.refresh_category()
         prompt_top_level(self.root, "Add Transaction", ["Date", "Category", "Amount", "Description"], callback)
 
     def refresh_transactions(self):
@@ -114,7 +117,7 @@ class FinanceApp:
             self.budget_tree.heading(col, text=col)
         self.budget_tree.pack(expand=1, fill="both")
 
-        ttk.Button(self.budget_tab, text="Add/Update Budget", command=self.add_budget).pack()
+        ttk.Button(self.budget_tab, text="Add/Update Budget", command=self.add_budget).pack(pady=5)
 
         self.refresh_budget()
 
@@ -136,32 +139,68 @@ class FinanceApp:
         populate_tree(self.budget_tree, budget_list, ["Month", "Budget", "Spent", "Remaining"])
         alert_if_low(self.budget_tree, column=3, threshold=0.1)
 
-    # ---------------- Category ----------------
+    # ---------------- Category Analysis ----------------
     def create_category_tab(self):
         self.category_tab = ttk.Frame(self.tab_control)
         self.tab_control.add(self.category_tab, text="Category Analysis")
-        ttk.Label(self.category_tab, text="Category Analysis").pack()
 
-        # Could integrate category_analysis module here for charts & analysis
+        self.cat_tree_frame = ttk.Frame(self.category_tab)
+        self.cat_tree_frame.pack(side="left", fill="both", expand=True)
+        cols = ["Category", "Amount"]
+        self.cat_tree = ttk.Treeview(self.cat_tree_frame, columns=cols, show="headings")
+        for col in cols:
+            self.cat_tree.heading(col, text=col)
+        self.cat_tree.pack(expand=1, fill="both")
+
+        self.cat_chart_frame = ttk.Frame(self.category_tab)
+        self.cat_chart_frame.pack(side="right", fill="both", expand=True)
+
+        self.refresh_category()
+
+    def refresh_category(self):
+        category_totals = {}
+        for month_trans in self.data.get("transactions", {}).values():
+            for t in month_trans:
+                category_totals[t["category"]] = category_totals.get(t["category"], 0) + t["amount"]
+
+        cat_list = [{"Category": k, "Amount": v} for k, v in category_totals.items()]
+        populate_tree(self.cat_tree, cat_list, ["Category", "Amount"])
+
+        if MATPLOTLIB_AVAILABLE:
+            for widget in self.cat_chart_frame.winfo_children():
+                widget.destroy()
+            create_bar_chart(self.cat_chart_frame, "Spending by Category", list(category_totals.keys()),
+                             {"Amount": list(category_totals.values())})
 
     # ---------------- What-If Simulator ----------------
     def create_scenario_tab(self):
         self.scenario_tab = ttk.Frame(self.tab_control)
         self.tab_control.add(self.scenario_tab, text="What-If Simulator")
 
-        ttk.Label(self.scenario_tab, text="Adjust Budget / Expenses to see impact").pack()
-        ttk.Button(self.scenario_tab, text="Run Scenario", command=self.run_scenario).pack()
+        ttk.Label(self.scenario_tab, text="Adjust Budgets or Expenses to see impact").pack(pady=5)
+
+        ttk.Button(self.scenario_tab, text="Run Scenario", command=self.run_scenario).pack(pady=5)
+        ttk.Button(self.scenario_tab, text="Reset Scenario", command=self.reset_scenario).pack(pady=5)
+
+        self.scenario_result = ttk.Label(self.scenario_tab, text="")
+        self.scenario_result.pack(pady=10)
 
     def run_scenario(self):
         def callback(values):
-            # Example: temporarily adjust budgets and show new remaining
             month = values["Month"]
             delta = float(values["Delta"])
             self.data.setdefault("budgets", {}).setdefault(month, 0)
             self.data["budgets"][month] += delta
-            messagebox.showinfo("Scenario Applied", f"Budget for {month} adjusted by {delta}")
+            self.scenario_result.config(text=f"Scenario Applied: {month} budget adjusted by {delta}")
             self.refresh_budget()
         prompt_top_level(self.root, "Run What-If Scenario", ["Month", "Delta"], callback)
+
+    def reset_scenario(self):
+        self.data = self.load_data()  # reload original data
+        self.refresh_budget()
+        self.refresh_category()
+        self.scenario_result.config(text="Scenario Reset")
+        messagebox.showinfo("Reset", "Scenario reset to original data.")
 
     # ---------------- Reports ----------------
     def create_reports_tab(self):
