@@ -1,16 +1,15 @@
-from utils import load_data, save_data
+import json
+import os
 
-data = load_data()
+DATA_FILE = "financial_data.json"
 
-def get_budgets():
-    return data.get("budgets", {})
+def load_data():
+    if os.path.exists(DATA_FILE):
+        with open(DATA_FILE, "r") as f:
+            return json.load(f)
+    else:
+        return {"budgets": {}, "transactions": [], "scenarios": []}
 
-def get_transactions():
-    return data.get("transactions", {})
-
-def get_scenarios():
-    return data.get("scenarios", {})
-
-def update_data(key, value):
-    data[key] = value
-    save_data(data)
+def save_data(data):
+    with open(DATA_FILE, "w") as f:
+        json.dump(data, f, indent=4)
