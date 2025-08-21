@@ -1,0 +1,99 @@
+2025-08-21 00:59:03 - root - INFO - ==================================================
+2025-08-21 00:59:03 - root - INFO - Starting Financial Management & Simulation Tool v2.0.0
+2025-08-21 00:59:03 - root - INFO - ==================================================
+2025-08-21 00:59:03 - root - INFO - Starting Financial Management & Simulation Tool v2.0.0
+2025-08-21 00:59:03 - root - INFO - Data saved successfully
+2025-08-21 00:59:03 - root - INFO - Created new data file with defaults
+2025-08-21 00:59:03 - root - ERROR - Failed to start application: bad option "variable": must be add, info, or remove
+Traceback (most recent call last):
+  File "/Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/main.py", line 30, in main
+    app = FinancialManagementApp()
+  File "/Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/gui/main_window.py", line 24, in __init__
+    self.setup_tabs()
+    ~~~~~~~~~~~~~~~^^
+  File "/Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/gui/main_window.py", line 61, in setup_tabs
+    self.budget_tab = BudgetTab(self.notebook)
+                      ~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/gui/tabs/budget_tab.py", line 21, in __init__
+    self.setup_ui()
+    ~~~~~~~~~~~~~^^
+  File "/Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/gui/tabs/budget_tab.py", line 101, in setup_ui
+    var.trace('w', lambda *args: self.update_total())
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/tkinter/__init__.py", line 506, in trace_variable
+    self._tk.call("trace", "variable", self._name, mode, cbname)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_tkinter.TclError: bad option "variable": must be add, info, or remove
+2025-08-21 01:01:28 - root - INFO - ==================================================
+2025-08-21 01:01:28 - root - INFO - Starting Financial Management & Simulation Tool v2.0.0
+2025-08-21 01:01:28 - root - INFO - ==================================================
+2025-08-21 01:01:28 - root - INFO - Starting Financial Management & Simulation Tool v2.0.0
+2025-08-21 01:01:29 - root - INFO - Data loaded successfully
+2025-08-21 01:01:29 - root - INFO - Starting GUI application
+2025-08-21 01:01:29 - root - INFO - Switched to tab: dashboard
+2025-08-21 01:01:37 - root - INFO - Switched to tab: planning
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/Credit Card EMI 1: 0.0
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/Credit Card EMI 2: 0.0
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/Personal Loan EMI 1: 0.0
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/Personal Loan EMI 2: 0.0
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/Home Loan EMI: 0.0
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/Mutual Fund SIP: 3000.0
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/PPF: 0.0
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/RD: 0.0
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/Ponmagan Policy: 0.0
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/Gold Investment: 0.0
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/Bitcoin Investment: 0.0
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/Baby Health Policy: 0.0
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/Baby Education Policy: 0.0
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/OTT Subscriptions: 0.0
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/Hospital: 0.0
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/Swiggy/Food: 0.0
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/Petrol: 0.0
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/General Expenses: 0.0
+2025-08-21 01:01:54 - root - INFO - Backup created: /Users/dhiviyalakshmi.athoughtworks.com/Downloads/All files - financial/financial_management_tool/data/backups/auto_backup_20250821_010154.json
+2025-08-21 01:01:54 - root - INFO - Data saved successfully
+2025-08-21 01:01:54 - root - INFO - Set budget for Aug-25/Shopping: 0.0
+2025-08-21 01:01:57 - root - INFO - Switched to tab: dashboard
+2025-08-21 01:07:19 - root - INFO - ==================================================
+2025-08-21 01:07:19 - root - INFO - Starting Financial Management & Simulation Tool v2.0.0
+2025-08-21 01:07:19 - root - INFO - ==================================================
+2025-08-21 01:07:19 - root - INFO - Starting Financial Management & Simulation Tool v2.0.0
+2025-08-21 01:07:20 - root - INFO - Data loaded successfully
+2025-08-21 01:07:20 - root - INFO - Starting GUI application
+2025-08-21 01:07:20 - root - INFO - Switched to tab: dashboard

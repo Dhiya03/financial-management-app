@@ -1,0 +1,176 @@
+{
+  "categories": {
+    "Loans & EMIs": [
+      "Credit Card EMI 1",
+      "Credit Card EMI 2",
+      "Personal Loan EMI 1",
+      "Personal Loan EMI 2",
+      "Home Loan EMI"
+    ],
+    "Investments": [
+      "Mutual Fund SIP",
+      "PPF",
+      "RD",
+      "Ponmagan Policy",
+      "Gold Investment",
+      "Bitcoin Investment",
+      "Baby Health Policy",
+      "Baby Education Policy"
+    ],
+    "Lifestyle & Essentials": [
+      "OTT Subscriptions",
+      "Hospital",
+      "Swiggy/Food",
+      "Petrol",
+      "General Expenses",
+      "Shopping"
+    ],
+    "Custom": []
+  },
+  "budgets": {
+    "Aug-25": {
+      "Credit Card EMI 1": 0.0,
+      "Credit Card EMI 2": 0.0,
+      "Personal Loan EMI 1": 0.0,
+      "Personal Loan EMI 2": 0.0,
+      "Home Loan EMI": 0.0,
+      "Mutual Fund SIP": 3000.0,
+      "PPF": 0.0,
+      "RD": 0.0,
+      "Ponmagan Policy": 0.0,
+      "Gold Investment": 0.0,
+      "Bitcoin Investment": 0.0,
+      "Baby Health Policy": 0.0,
+      "Baby Education Policy": 0.0,
+      "OTT Subscriptions": 0.0,
+      "Hospital": 0.0,
+      "Swiggy/Food": 0.0,
+      "Petrol": 0.0,
+      "General Expenses": 0.0
+    }
+  },
+  "transactions": {},
+  "scenarios": {},
+  "settings": {
+    "alert_threshold": 10,
+    "currency": "₹",
+    "last_selected_month": "Aug-25",
+    "category_keywords": {
+      "Credit Card EMI 1": [
+        "CC1",
+        "CREDIT CARD",
+        "EMI",
+        "HDFC CC"
+      ],
+      "Credit Card EMI 2": [
+        "CC2",
+        "ICICI CC",
+        "AXIS CC"
+      ],
+      "Personal Loan EMI 1": [
+        "PERSONAL LOAN",
+        "PL EMI",
+        "LOAN EMI"
+      ],
+      "Personal Loan EMI 2": [
+        "PL2",
+        "PERSONAL LOAN 2"
+      ],
+      "Home Loan EMI": [
+        "HOME LOAN",
+        "HOUSING LOAN",
+        "HL EMI"
+      ],
+      "Mutual Fund SIP": [
+        "MF",
+        "SIP",
+        "MUTUAL FUND",
+        "HDFC MF",
+        "ICICI MF"
+      ],
+      "PPF": [
+        "PPF",
+        "PROVIDENT FUND",
+        "PUBLIC PROVIDENT"
+      ],
+      "RD": [
+        "RD",
+        "RECURRING DEPOSIT"
+      ],
+      "Ponmagan Policy": [
+        "PONMAGAN",
+        "LIC PONMAGAN"
+      ],
+      "Gold Investment": [
+        "GOLD",
+        "BULLION",
+        "GOLD ETF"
+      ],
+      "Bitcoin Investment": [
+        "BITCOIN",
+        "BTC",
+        "CRYPTO",
+        "CRYPTOCURRENCY"
+      ],
+      "Baby Health Policy": [
+        "BABY HEALTH",
+        "CHILD HEALTH",
+        "HEALTH POLICY"
+      ],
+      "Baby Education Policy": [
+        "BABY EDUCATION",
+        "CHILD EDUCATION",
+        "EDUCATION POLICY"
+      ],
+      "OTT Subscriptions": [
+        "NETFLIX",
+        "PRIME",
+        "HOTSTAR",
+        "OTT",
+        "SUBSCRIPTION"
+      ],
+      "Hospital": [
+        "HOSPITAL",
+        "CLINIC",
+        "MEDICAL",
+        "DOCTOR",
+        "APOLLO",
+        "FORTIS"
+      ],
+      "Swiggy/Food": [
+        "SWIGGY",
+        "ZOMATO",
+        "FOOD",
+        "DELIVERY",
+        "RESTAURANT"
+      ],
+      "Petrol": [
+        "PETROL",
+        "FUEL",
+        "DIESEL",
+        "PETROL PUMP",
+        "HP",
+        "IOCL"
+      ],
+      "General Expenses": [
+        "MISC",
+        "GENERAL",
+        "OTHER",
+        "EXPENSE"
+      ],
+      "Shopping": [
+        "SHOPPING",
+        "AMAZON",
+        "FLIPKART",
+        "MALL",
+        "STORE",
+        "RETAIL"
+      ]
+    }
+  },
+  "metadata": {
+    "version": "2.0.0",
+    "created_at": "2025-08-21T00:59:03.930304",
+    "last_modified": "2025-08-21T01:01:54.881141"
+  }
+}

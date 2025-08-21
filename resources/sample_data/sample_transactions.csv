@@ -1,0 +1,11 @@
+Date,Category,Amount,Description,Source
+2025-08-01,Credit Card EMI 1,15000,Monthly EMI Payment,manual
+2025-08-05,Mutual Fund SIP,5000,SIP Investment,manual
+2025-08-10,Hospital,8500,Medical Consultation,imported
+2025-08-12,Swiggy/Food,1250,Food Delivery,imported
+2025-08-15,Petrol,3000,Fuel,manual
+2025-08-18,Shopping,5500,Amazon Purchase,imported
+2025-08-20,General Expenses,2000,Miscellaneous,manual
+2025-08-22,OTT Subscriptions,500,Netflix,manual
+2025-08-25,PPF,2000,PPF Deposit,manual
+2025-08-28,Gold Investment,2000,Gold SIP,manual
