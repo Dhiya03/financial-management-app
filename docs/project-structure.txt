@@ -1,0 +1,59 @@
+financial_management_tool/
+│
+├── main.py                      # Main application entry point
+├── requirements.txt             # Python dependencies
+├── README.md                    # Project documentation
+├── config.py                    # Application configuration and constants
+│
+├── models/                      # Data models
+│   ├── __init__.py
+│   ├── transaction.py          # Transaction data model
+│   ├── budget.py               # Budget data model
+│   ├── scenario.py             # Scenario data model
+│   └── app_data.py             # Main application data model
+│
+├── managers/                    # Business logic managers
+│   ├── __init__.py
+│   ├── data_manager.py         # Data persistence and loading
+│   ├── transaction_manager.py  # Transaction operations
+│   ├── budget_manager.py       # Budget operations
+│   ├── category_manager.py     # Category management
+│   ├── analytics_engine.py     # Analytics and insights
+│   └── scenario_simulator.py   # What-if simulation
+│
+├── gui/                         # GUI components
+│   ├── __init__.py
+│   ├── main_window.py          # Main application window
+│   ├── tabs/
+│   │   ├── __init__.py
+│   │   ├── dashboard_tab.py   # Dashboard tab
+│   │   ├── transactions_tab.py # Transactions tab
+│   │   ├── budget_tab.py       # Budget planning tab
+│   │   ├── analysis_tab.py     # Category analysis tab
+│   │   ├── simulator_tab.py    # What-if simulator tab
+│   │   └── reports_tab.py      # Reports tab
+│   └── dialogs/
+│       ├── __init__.py
+│       ├── transaction_dialog.py # Add/Edit transaction dialog
+│       ├── template_dialog.py    # Budget template dialog
+│       ├── analytics_dialog.py   # Analytics dialog
+│       └── scenario_dialog.py    # Create scenario dialog
+│
+├── utils/                       # Utility functions
+│   ├── __init__.py
+│   ├── validators.py           # Input validation functions
+│   ├── formatters.py           # Format currency, dates, etc.
+│   ├── file_handlers.py        # Import/Export utilities
+│   └── logger.py               # Logging configuration
+│
+├── data/                        # Data storage (created at runtime)
+│   ├── app_data.json           # Main data file
+│   ├── backups/                # Backup files
+│   ├── exports/                # Export files
+│   └── logs/                   # Application logs
+│
+└── resources/                   # Static resources
+    ├── templates/              # Budget templates
+    │   └── budget_templates.json
+    └── sample_data/            # Sample data for testing
+        └── sample_transactions.csv
